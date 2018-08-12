@@ -1,0 +1,40 @@
+
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-size: $default-font-size;
+	line-height: 1.7;
+	color: $color-dark-grey;
+}
+
+.paragraph {
+	text-transform: uppercase;
+    font-size: 1.6rem;
+    
+    &:not(:last-child) {
+    	margin-bottom: 3rem;
+    }
+}
+
+.heading-secondary {
+	text-transform: uppercase;
+	font-weight: 700px;
+	font-size: 3.5rem;
+	display: inline-block;
+	letter-spacing: .2rem;
+	transition: all .2s;
+
+	@include respond(tab-port) {
+		font-size: 3rem;
+	}
+
+	@include respond(phone) {
+		font-size: 2.5rem;
+	}
+
+	&:hover {
+		transform: skewY(2deg) skewX(15deg) scale(1.1);
+		text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+	}
+}
+

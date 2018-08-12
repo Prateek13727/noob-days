@@ -1,0 +1,15 @@
+.invoice {
+	&__input {
+		border: none;
+	}
+	&__label {
+		margin-right: 1rem;
+	}
+}
+
+.navigation {
+	&__addItem-btn {
+		text-decoration: none;
+		color: $color-black;
+	}	
+}

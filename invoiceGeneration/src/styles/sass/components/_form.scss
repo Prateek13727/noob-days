@@ -1,0 +1,27 @@
+.form {
+	box-shadow: 0 2px 4px;
+    padding: 2rem;
+
+	&__group {
+		margin-bottom: 1rem;
+	}
+	&__label {
+	}
+	&__input {
+		display: block;
+		width:80%;
+	}
+	&__checkbox {
+	    transform: translateY(0.2rem) scale(1.1);
+    	margin-left: 1rem;
+	}
+
+	&__add-btn {
+		margin-right:1rem;
+	}
+
+	&__checkout-btn a {
+		text-decoration: none;
+		color: $color-black;
+	}
+}
