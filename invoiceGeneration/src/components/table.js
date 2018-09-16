@@ -15,8 +15,6 @@ export default class Table extends Component {
       return (
         <tr>
           {columns.map(function(column) {
-            console.log(column);
-            console.log(row[column]);
             return <td>{row[column]}</td>; })}
         </tr>); });
      

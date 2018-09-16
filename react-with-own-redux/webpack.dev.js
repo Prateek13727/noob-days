@@ -5,13 +5,8 @@ module.exports = merge(common, {
 	mode: 'development',
 	devServer: {
 		host: 'localhost',
-		port: 7001,
+		port: 7000,
 		open: true,
-		hot: true,
- 		historyApiFallback: true,
- 		proxy: {
-      		'/invoice': 'http://localhost:3000'
-    	}
 	},
 	watch: false,
  	watchOptions: {

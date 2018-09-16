@@ -7,11 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "dev-server": "webpack-dev-server --config webpack.dev.js --hot",
+    "dev-server": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "jest ./test",
     "compile-sass": "node-sass src/styles/sass/main.scss src/styles/css/styles.css",
-    "watch:sass": "node-sass src/styles/sass/main.scss src/styles/css/styles.css -w",
     "start": "run-s compile-sass dev-server"
   },
   "author": "",
@@ -19,11 +18,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "redux": "^4.0.0",
-    "redux-promise": "^0.6.0"
+    "react-dom": "^16.4.1"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/enzyme.setup.js"

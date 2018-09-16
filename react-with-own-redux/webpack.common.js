@@ -1,8 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlCleanWebpackPlugin = require('clean-webpack-plugin');
-
 module.exports = {
 	entry: {
 		main: './src/index.js',
@@ -11,7 +9,6 @@ module.exports = {
 	output: {
 		filename: '[name].[hash].js',
 		path: path.resolve('./dist'),
-	 	publicPath: '/'
 	},
 	module: {
 		rules: [
@@ -34,7 +31,6 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: 'index.html'
 		}),
-		new HtmlCleanWebpackPlugin(['dist']),
-	 	new webpack.HotModuleReplacementPlugin()
+		new HtmlCleanWebpackPlugin(['dist'])
 	]
 }
