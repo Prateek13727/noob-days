@@ -1,0 +1,75 @@
+openapi: 3.0.0
+
+info:
+  description: VOZ CRM Apis
+  version: "1.0.0"
+  title: VOZ CRM Apis
+
+paths:
+  /get_calls_details:
+    get:
+      tags:
+        - getCallData
+      summary: call-details
+      description:  call-details
+      responses:
+        '200':
+          description: list of calls
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CallDataRequest'
+
+components:
+  schemas:
+    CallDataRequest:
+      type: object
+      required:
+        - host
+        - customer
+        - duration
+      properties:
+        host:
+          $ref: '#/components/schemas/Customer'
+        customer:
+          $ref: '#/components/schemas/Host'
+        duration:
+          type: number
+
+    Customer:
+      required:
+        - name
+        - id
+        - call_log
+      properties:
+        name: 
+          type: string
+        id:
+          type: number
+        call_log:
+          type: array
+          items: 
+           type: array
+           items:
+            type: number
+          example: [[1.9500000000000015, 2.9399999999999955], [5.4, 22.86000000000011] ]
+
+    Host:
+      required:
+        - name
+        - id
+        - call_log
+      properties:
+        name: 
+          type: string
+        id: 
+          type: number
+        call_log:
+          type: array
+          items: 
+           type: array
+           items: 
+            type: number
+          example: [[1.9500000000000015, 2.9399999999999955], [5.4, 22.86000000000011] ]
