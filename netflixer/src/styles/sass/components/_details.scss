@@ -1,0 +1,118 @@
+.netflix__details {
+	margin: 5rem 10rem;
+	color: $color-netflix-white;
+
+	&--header {
+		margin-bottom: 3rem;
+		text-align: left;
+		padding: 0 5rem;
+	}
+
+	&--back-arrow {
+		color: $color-black;
+		font-size: 4rem;
+		transition: all 1s;
+		&:hover{
+			color: $color-netflix-white;
+		}
+	}
+
+	&-main {
+		margin-bottom: 3rem;
+	}
+
+	&--section {
+		padding: 2rem 5rem;
+	}
+	
+	&--left {
+		text-align: left;
+		font-size: 1.5rem;
+	}
+
+	&--right {
+		text-align: right;
+	}
+	
+	&--imageBox {
+		text-align: center;
+	}
+
+	&--image {
+		height: 50%;
+		width: 50%;
+	}
+	
+	&--title {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+
+	&--title,&--description {
+		margin-bottom: 2rem;
+	}
+
+	&--year {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+	}
+
+	&--imdbRating {
+		margin-top: 1rem;
+	}
+
+	@include respond(tab-port){
+		&--image {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	@include respond(phone) {
+		&--section {
+			position: relative;
+		}
+
+		&--right {
+			text-align: left;
+			position: absolute;
+    		top: 94%;
+    		left: 0;
+    		padding-left: 5rem;
+		}
+		
+		&--imageBox {
+		    position: absolute;
+			top: 0;
+    		right: 0;
+    		width: 50% !important;
+		}
+
+		&--description {
+			display: none;
+		}
+	}
+}
+
+.netflix__trailer {
+	position: relative;
+	transition: all .2s;
+	padding-bottom: 56.25%;
+	&--iframe {
+		position: absolute; 
+		top: 0; 
+		left: 4%; 
+		width: 100%; 
+		height: 100%;	
+		@include respond(phone) {
+			margin-top: 15rem;
+			top: 20%;
+			left: 12%;
+		}
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+

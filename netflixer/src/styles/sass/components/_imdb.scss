@@ -1,0 +1,24 @@
+.imdb {
+  &--logo {
+    font: 2em/1 Impact, HelveticaNeue-CondensedBold, sans-serif; 
+    color: #000;
+    text-shadow: 0 0 .15em #fff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: .25em .35em;
+    border-radius: .15em;
+    background: radial-gradient(#ffffb8, #ce981d);
+    &:hover {
+      background: radial-gradient(lighten(#ffffb8, 10%), lighten(#ce981d, 10%));
+    }
+  }
+  
+  &--rating {
+    font-size: 4rem;
+  }
+
+  &--ten {
+    font-size: 1.5rem;
+  }
+}
