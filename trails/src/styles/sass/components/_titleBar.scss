@@ -1,0 +1,13 @@
+.titleBar {
+    &__index {
+    	border-bottom: 3px grey solid;
+ 	   	display: inline-block;
+    	margin-bottom: 1rem;
+    	font-size: 1.5rem;
+    	padding: 0px 2rem;
+    	color: $color-white;
+    }
+    &__lastPage{
+		color: $color-white;	
+    }
+}

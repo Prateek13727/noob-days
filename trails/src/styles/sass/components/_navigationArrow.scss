@@ -1,0 +1,29 @@
+.trails__backNavigation {
+	position: absolute;
+    left: -5%;
+    top: 50%;
+    transition: all 0.2s;
+    transform: translateY(-50%);
+    font-size: 5.5rem;
+    color: $color-white;
+    &--arrow {
+        &:hover,
+        &:focus {
+            transform: scale(1.2);
+        }
+    }
+}
+.trails__forwardNavigation {
+	right: -5%;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    font-size: 5.5rem;
+    color: $color-white;
+    &--arrow {
+        &:hover,
+        &:focus {
+            transform: scale(1.2);
+        }
+    }
+}

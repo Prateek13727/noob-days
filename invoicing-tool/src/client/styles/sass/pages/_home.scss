@@ -1,0 +1,25 @@
+.invoiceTool {
+	margin: 2rem;
+	&__navbar {
+		padding: 1.5rem 2.5rem;
+    	font-size: larger;
+		background-color: $color-bootstrap-primary;
+		margin-bottom: 0;
+	}
+	&__addInvoice {
+		text-align: right;
+		height: 0;
+	}
+	&__dashboard {
+		text-decoration: none;
+		color: $color-white !important;
+	}
+}
+.listComponent {
+	display: inline-block;
+	width: 25%;
+}
+.viewComponent {
+	display: inline-block;
+	width: 75%;
+}

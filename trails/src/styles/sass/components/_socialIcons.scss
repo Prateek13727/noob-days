@@ -1,0 +1,12 @@
+.socialIcons {
+	transition: all .3s;
+	&__text {
+		color: $color-white;
+	}
+	&__icon {
+		&:focus,
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}

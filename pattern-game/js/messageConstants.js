@@ -1,0 +1,11 @@
+const MESSAGE_DEFAULT = "Play Arena";
+const MESSAGE_SUCCESS = "Yaaee Success";
+const MESSAGE_FAIL = "Sequence does match the pattern! Try Again";
+const MESSAGE_PATTERN_WARNING = "Hit play pattern before you start";
+const MESSAGE_START_PLAY = "Observe the pattern carefully";
+const MESSAGE_END_PLAY = "Your turn!";
+const MESSAGE_AFTER_RESET = "Playtime";
+const MESSAGE_SUCCESSFUL_FINISH_1 = "Dude you are a pro";
+const MESSAGE_SUCCESSFUL_FINISH_2 = "Game Finished";
+const MESSAGE_PATTERN_UPDATED = "Pattern updated"
+const MESSAGE_FINISH_INSTRUCTION = "Complete 5 rounds to win"

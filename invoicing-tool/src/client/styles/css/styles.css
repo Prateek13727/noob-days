@@ -1,0 +1,337 @@
+/*
+0-600px phone
+600-900px tablet potrait 
+900-1200px tablet landscape
+1200 -1800px our normal styles apply
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777; }
+
+.paragraph {
+  text-transform: uppercase;
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-no-margin-bottom {
+  margin-bottom: 0 !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-large {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-large {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-large {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 6rem !important; }
+
+.u-no-margin-right {
+  margin-right: 0 !important; }
+
+.u-no-margin-cols {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.u-margin-right-xsmall {
+  margin-right: 1rem !important; }
+
+.u-center-text {
+  text-align: center; }
+
+.no-pads {
+  padding: 0 !important; }
+
+.u-float-right {
+  float: right !important; }
+
+.u-font-weight-bold {
+  font-weight: bold !important; }
+
+.addInvoice--btn, .addInvoice--btn:link, .addInvoice--btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #5cb85c;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  transition: all .2s;
+  transform: translate(-9rem, -3rem);
+  border: none;
+  cursor: pointer; }
+  .addInvoice--btn:hover, .addInvoice--btn:focus, .addInvoice--btn:link:hover, .addInvoice--btn:link:focus, .addInvoice--btn:visited:hover, .addInvoice--btn:visited:focus {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .addInvoice--btn:active, .addInvoice--btn:link:active, .addInvoice--btn:visited:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    outline: none; }
+
+.addInvoice--iframe {
+  font-size: 3.5rem;
+  position: absolute;
+  top: 55%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  color: #fff; }
+
+.pritntInvoice--btn, .pritntInvoice--btn:link, .pritntInvoice--btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: all .5s;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-37%);
+  display: none; }
+  .pritntInvoice--btn:hover, .pritntInvoice--btn:focus, .pritntInvoice--btn:link:hover, .pritntInvoice--btn:link:focus, .pritntInvoice--btn:visited:hover, .pritntInvoice--btn:visited:focus {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .pritntInvoice--btn:active, .pritntInvoice--btn:link:active, .pritntInvoice--btn:visited:active {
+    transform: translateY(-4rem) scaleX(1.2) scaleY(1.3);
+    outline: none; }
+
+.invoiceCustomerModal__skip-btn {
+  float: right; }
+
+.skip-btn--iframe {
+  padding-left: 1rem; }
+
+.listView {
+  padding: 2rem 0;
+  background-color: #221f1f; }
+  .listView__inputSearch {
+    text-align: center; }
+  .listView__inputSearch {
+    margin-bottom: 2rem; }
+  .listView__invoiceCount {
+    margin-left: 3rem;
+    margin-bottom: 2rem; }
+    .listView__invoiceCount--value {
+      display: inline-block;
+      transform: translateY(1px);
+      margin-left: 1rem; }
+
+.invoiceView__header {
+  text-transform: uppercase; }
+
+.invoiceView__headerRight {
+  text-align: right; }
+  .invoiceView__headerRight--1, .invoiceView__headerRight--2 {
+    display: inline-block; }
+    .invoiceView__headerRight--1:not(:last-child), .invoiceView__headerRight--2:not(:last-child) {
+      margin-right: 1rem; }
+
+.invoiceView____headerLeft----title {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.invoiceView__billingDetails {
+  text-align: right; }
+
+.invoiceCompactView {
+  padding: 0 1rem; }
+  .invoiceCompactView:hover {
+    background-color: #575050; }
+
+.compactView__leftDetails--customer-name {
+  color: #428bca; }
+
+.inputGroup {
+  margin-bottom: 1rem; }
+  .inputGroup__input {
+    border: none; }
+  .inputGroup__label {
+    margin-right: 3rem; }
+
+/* The container <div> - needed to position the dropdown content */
+.inputSearch {
+  position: relative;
+  display: inline-block; }
+  .inputSearch__component {
+    border-box: box-sizing;
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: #f5f5f1;
+    color: #000;
+    width: 80%; }
+    .inputSearch__component:focus {
+      outline: 1px solid #fff; }
+
+.invoiceCustomerModal__header--1 {
+  font-weight: bold; }
+
+.invoiceCustomerModal__header--2 {
+  margin: 0.4rem 2rem 0 1rem;
+  text-transform: uppercase;
+  float: right;
+  font-size: 1.5rem; }
+
+.invoiceCustomerModal__subHeader {
+  text-transform: uppercase;
+  font-size: 1.2rem; }
+
+.invoiceCustomerForm__submit--btn {
+  float: right; }
+
+#modal__subTotal {
+  width: 100%; }
+
+.itemName--header, .itemPrice--header, .itemQuantity--header {
+  font-size: 1.2rem; }
+
+.customerInfo {
+  text-align: right; }
+  .customerInfo__title {
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+
+.header {
+  text-transform: uppercase;
+  text-align: center; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  /*@include respond(tab-port) {
+		max-width: 50rem;
+	}*/ }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 4rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left;
+    /*
+		@include respond(tab-port) {
+			width: 100% !important;
+		}*/ }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0px;
+          margin-bottom: 4rem; } }
+  .row .col-1-of-2 {
+    width: calc(( 100% - 6rem) /2); }
+  .row .col-1-of-3 {
+    width: calc(( 100% - 2 * 6rem) /3); }
+  .row .col-2-of-3 {
+    width: calc(100% - ( ( ( 100% - 2 * 6rem) /3)   + 6rem )); }
+  .row .col-1-of-4 {
+    width: calc( ( 100% - 3 * 6rem) /4); }
+  .row .col-2-of-4 {
+    width: calc(100% - (2 * ( ( 100% - 3 * 6rem) /4)  + 2 * 6rem )); }
+  .row .col-3-of-4 {
+    width: calc(100% - ((( 100% - 3 * 6rem) /4)  + 6rem )); }
+
+.invoiceTool {
+  margin: 2rem; }
+  .invoiceTool__navbar {
+    padding: 1.5rem 2.5rem;
+    font-size: larger;
+    background-color: #428bca;
+    margin-bottom: 0; }
+  .invoiceTool__addInvoice {
+    text-align: right;
+    height: 0; }
+  .invoiceTool__dashboard {
+    text-decoration: none;
+    color: #fff !important; }
+
+.listComponent {
+  display: inline-block;
+  width: 25%; }
+
+.viewComponent {
+  display: inline-block;
+  width: 75%; }

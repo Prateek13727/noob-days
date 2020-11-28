@@ -1,0 +1,43 @@
+.userPorfolio {
+	text-align: center;
+	&:not(:last-child){
+		margin-right: 2rem;
+	}
+	&__dropdown {
+		display: inline-block;
+		margin-right: 2rem;
+	}
+	&__currencyQuantity{
+		display: inline-block;
+		margin-right: 2rem;
+	}
+	&__currencyValue {
+		display: inline-block;
+		margin-right: 2rem;
+	}
+	&__totalPortfolioWorth {
+		display: inline-block;
+		margin-right: 2rem;
+	}
+	&__viewPortfolio {
+		display: inline-block;
+		margin-right: 2rem;
+		transform: translateX(7rem);
+	}	
+
+}
+
+.cryptoListTable {
+	&__loader {
+		text-align: center;	
+	}	
+}
+
+.portfolioTable {
+	&__emptyWallet {
+    	text-align: center;
+    	margin-top: 2rem;
+    	font-size: 2rem;
+	}
+}
+

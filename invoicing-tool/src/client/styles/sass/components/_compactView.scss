@@ -1,0 +1,12 @@
+.invoiceCompactView {
+	padding: 0 1rem;
+
+	&:hover {
+		background-color: lighten($color-netflix-black,20%);
+	}	
+}
+.compactView{
+	&__leftDetails--customer-name {
+		color: $color-bootstrap-primary;
+	}
+}

@@ -1,0 +1,1 @@
+export const TRELL_GET_DATA_API = 'https://trell.co/third-party/tasks/trail.json';

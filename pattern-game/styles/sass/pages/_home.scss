@@ -1,0 +1,45 @@
+.game-pattern {
+	text-align: center;
+	margin: 2rem;
+	margin-left: 50%;
+	margin-bottom: 4rem;
+}
+
+.game-stats {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+.stats {
+	display: inline-block;
+	font-size: 2rem;
+	float:left;
+	margin-left: 10%;
+}
+
+.level__label {
+	margin-right: 2rem; 
+}
+
+.level__input {
+	border: none;
+	font-size: 3rem;
+    padding: 1.5rem 2rem;
+    width: 10rem;
+    text-align: center;
+}
+
+.stats__message {
+	float:right;
+	margin-right: 15%;
+	font-weight: 700;
+}
+
+.game-btns {
+    transform: translateY(10%);
+	text-align: center;
+	clear:both;
+}
+
+.game__btn {
+	margin-bottom: 1rem;
+}

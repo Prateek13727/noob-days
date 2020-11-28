@@ -1,0 +1,21 @@
+.lastPage {
+	&__author-avatar {
+		width: 14%;	
+	}
+	&__social-stats {
+		margin: 5rem 0;
+	}
+	&__author {
+		margin: 5rem 0;
+	}
+	&__text {
+		color:$color-white;
+		font-size: 1.5rem;
+	}
+	&__like, &__comment {
+		margin-bottom: 2rem;
+	}
+	&__likeImg, &__commentImg {
+		width: 5%;
+	}
+}

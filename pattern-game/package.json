@@ -1,0 +1,17 @@
+{
+  "name": "vanilla-js-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "compile:sass": "node-sass styles/sass/main.scss styles/styles.css",
+    "watch:sass": "node-sass styles/sass/main.scss styles/styles.css -w",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-sass": "^4.9.3"
+  }
+}

@@ -1,0 +1,20 @@
+.pattern__circle {
+	display: block;
+	padding: 0;
+	width: 30rem;
+	height: 30rem;
+	transform: translateX(-50%);
+}
+
+.pattern__quarter {
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 15rem;
+	height: 15rem;
+}
+
+.pattern__quarter--text {
+	visibility: hidden;
+}

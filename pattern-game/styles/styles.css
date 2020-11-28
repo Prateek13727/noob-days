@@ -1,0 +1,276 @@
+/*
+0-600px phone
+600-900px tablet potrait 
+900-1200px tablet landscape
+1200 -1800px our normal styles apply
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #000; }
+
+.paragraph {
+  text-transform: uppercase;
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-large {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-large {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-large {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem !important; }
+
+.u-center-text {
+  text-align: center; }
+
+.bg-red {
+  background-color: red; }
+
+.bg-yellow {
+  background-color: yellow; }
+
+.bg-blue {
+  background-color: blue; }
+
+.bg-green {
+  background-color: green; }
+
+.bg-white {
+  background-color: white; }
+
+.highlight {
+  background-color: black !important; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 5rem;
+  transition: all .2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  outline: none; }
+
+.btn:hover, .btn:focus {
+  transform: translateY(-0.1rem); }
+
+.btn:active {
+  transform: translateY(0.1rem); }
+
+.pattern__circle {
+  display: block;
+  padding: 0;
+  width: 30rem;
+  height: 30rem;
+  transform: translateX(-50%); }
+
+.pattern__quarter {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 15rem;
+  height: 15rem; }
+
+.pattern__quarter--text {
+  visibility: hidden; }
+
+.game-bg {
+  overflow: hidden; }
+
+.bg-div-parent {
+  z-index: -1;
+  background-size: cover;
+  position: fixed;
+  opacity: 0.2;
+  height: 100%;
+  width: 100%; }
+
+.bg-format {
+  width: 50%;
+  height: 50%;
+  float: left; }
+
+.dummyText {
+  display: none; }
+
+.bg-div-1 {
+  background-color: red; }
+
+.bg-div-2 {
+  background-color: yellow; }
+
+.bg-div-3 {
+  background-color: blue; }
+
+.bg-div-4 {
+  background-color: green; }
+
+.primary-header {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  padding: .25rem; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 4rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0px;
+          margin-bottom: 4rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc(( 100% - 6rem) /2); }
+  .row .col-1-of-3 {
+    width: calc(( 100% - 2 * 6rem) /3); }
+  .row .col-2-of-3 {
+    width: calc(100% - ( ( ( 100% - 2 * 6rem) /3)   + 6rem )); }
+  .row .col-1-of-4 {
+    width: calc( ( 100% - 3 * 6rem) /4); }
+  .row .col-2-of-4 {
+    width: calc(100% - (2 * ( ( 100% - 3 * 6rem) /4)  + 2 * 6rem )); }
+  .row .col-3-of-4 {
+    width: calc(100% - ((( 100% - 3 * 6rem) /4)  + 6rem )); }
+
+.game-pattern {
+  text-align: center;
+  margin: 2rem;
+  margin-left: 50%;
+  margin-bottom: 4rem; }
+
+.game-stats {
+  text-align: center;
+  margin-bottom: 4rem; }
+
+.stats {
+  display: inline-block;
+  font-size: 2rem;
+  float: left;
+  margin-left: 10%; }
+
+.level__label {
+  margin-right: 2rem; }
+
+.level__input {
+  border: none;
+  font-size: 3rem;
+  padding: 1.5rem 2rem;
+  width: 10rem;
+  text-align: center; }
+
+.stats__message {
+  float: right;
+  margin-right: 15%;
+  font-weight: 700; }
+
+.game-btns {
+  transform: translateY(10%);
+  text-align: center;
+  clear: both; }
+
+.game__btn {
+  margin-bottom: 1rem; }

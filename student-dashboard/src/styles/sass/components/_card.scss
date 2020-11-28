@@ -1,0 +1,68 @@
+.card {
+	//Functionality
+	height: 30rem;
+	margin-bottom: 1rem;
+	margin-right: 2rem;
+	text-align: center;
+	transition: all .1s;
+	color: $color-netflix-white;
+
+ 	@include respond(tab-land) {
+		height: 25rem;
+	}
+	@include respond(tab-port) {
+		height: 20rem;
+	}
+
+	&__hr {
+		margin-bottom: 2rem;
+	}
+
+	&__face {
+		position: relative;
+		transition: all .8s ease;
+		width: 100%;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+		overflow: hidden;
+		background-color: $color-black;
+		opacity: 0.8;
+	}
+
+	&__heading {
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__details {
+		font-size: 2rem;
+	    padding: 1.5rem 2rem;
+	    &:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+		&-name {
+			font-size: 3rem;
+		}
+		&-standard-label, &-rollNo-label, &-totalMarks-label {
+			margin-right: 1rem;
+		}
+	}
+
+	&__imageBox {
+		text-align: center;
+		transition: all .3s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+
+	&__image {
+		width: 100%;
+		height: 100%;
+	}
+
+}
+

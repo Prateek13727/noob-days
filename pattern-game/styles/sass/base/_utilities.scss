@@ -1,0 +1,42 @@
+.u-margin-bottom-small { margin-bottom: 2rem !important; }
+.u-margin-bottom-medium { 
+	margin-bottom: 4rem !important; 
+	@include respond(tab-port) {
+		margin-bottom: 3rem !important; 
+	}
+}
+.u-margin-bottom-large {
+	margin-bottom: 8rem !important; 
+	@include respond(tab-port) {
+		margin-bottom: 5rem !important; 
+	}	
+}
+
+.u-margin-top-large { margin-bottom: 8rem !important; }
+.u-margin-top-huge { margin-bottom: 10rem !important; }
+
+.u-center-text { text-align: center; }
+
+.bg-red {
+	background-color: red;
+}
+
+.bg-yellow {
+	background-color: yellow;
+}
+
+.bg-blue {
+	background-color: blue;
+}
+
+.bg-green {
+	background-color: green;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.highlight {
+	background-color: black !important;
+}

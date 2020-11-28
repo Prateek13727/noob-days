@@ -1,0 +1,52 @@
+.firstPage {
+	height:100%;
+	&__title {
+		margin: 2rem 0.5rem;
+		color: $color-white;
+		font-size: 3rem;
+		font-weight: 800;
+		@include respond-mobile-first(tab-port) {
+			padding-top:35%;		
+		}
+	}
+	&__author{
+		margin: 2rem 0.5rem;
+	}
+	&__author-avatar {
+		width: 25%;
+		@include respond-mobile-first(tab-port) {
+			width: 35%;
+		}
+	}
+	&__author-trailBy {
+		color: $color-white;
+	}
+	&__author-name {
+		color: $color-white;
+		font-size: 2rem;
+	}
+	&__author-follow{
+		text-decoration: none;
+    	margin: 0 1rem;
+    	color: lightseagreen;
+    	font-weight: 900;
+	}
+	&__stats-list {
+		display: inline-block;
+		padding: 1.5rem 2rem;
+	}
+	&__stats-item {
+		display: inline-block;
+		color: $color-white;
+		font-size: 2rem;
+		margin-right: 2rem;
+		&-dot {
+			height: 10px;
+		    width: 10px;
+		    background-color: white;
+		    border-radius: 50%;
+		    display: inline-block;
+		    margin-right: 2px;
+		}
+	}
+}

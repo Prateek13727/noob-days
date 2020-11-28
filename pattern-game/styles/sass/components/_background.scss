@@ -1,0 +1,38 @@
+.game-bg {
+	overflow: hidden;
+}
+
+.bg-div-parent {
+	z-index: -1;
+	background-size: cover;
+	position: fixed;
+	opacity: 0.2;
+	height: 100%;
+	width: 100%;
+}
+
+.bg-format {
+	width: 50%;
+	height: 50%;
+	float: left;
+}
+
+.dummyText {
+	display: none;
+}
+
+.bg-div-1 {
+	background-color: red;
+}
+
+.bg-div-2 {
+	background-color: yellow;
+}
+
+.bg-div-3 {
+	background-color: blue;
+}
+
+.bg-div-4 {
+	background-color: green;
+}

@@ -1,0 +1,71 @@
+.students {
+	margin: 2rem;
+	&__row {
+		@include respond(tab-port) {
+			max-width: 80rem !important;
+		}
+		@include respond(phone) {
+			max-width: 50rem !important;
+		}				
+	}
+	&__card {
+		@include respond(tab-land) {
+			width: calc(( 100% - 2 * #{$gutter-horizontal}) /3) !important;
+		}
+		@include respond(tab-port) {
+			width: calc(( 100% - #{$gutter-horizontal}) /2)  !important;
+		}
+		@include respond(phone) {
+			width: 100% !important;
+		}	
+	}
+
+	&__background {
+		content: " ";
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: fixed;
+		z-index: -1;
+		&-img {
+		    width: 100%;
+    		height: 100%;
+    		opacity: 0.5;
+		}
+	}
+	&__header {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	&__loader {
+		text-align: center;
+		text-transform: uppercase;
+    	font-weight: bolder;
+	}
+	&__inputSearch{
+		display: inline-block;
+		margin-right: 1rem;
+		@include respond(phone) {
+			width: 100% !important;
+			margin-bottom: 2rem;
+		}
+	}
+	&__sortbyName-btn {
+		display: inline-block;
+		margin-right: 1rem;
+		@include respond(mini-phone) {
+			margin-bottom: 2rem;
+		}
+	}
+	&__sortbyMark-btn {
+		display: inline-block;
+		@include respond(mini-phone) {
+			margin-bottom: 2rem;
+		}
+	}
+	&__loader {
+		color: $color-netflix-white;
+		font-size: 3rem;
+	}
+}

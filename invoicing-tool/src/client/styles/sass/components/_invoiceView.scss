@@ -1,0 +1,23 @@
+.invoiceView {
+	&__header {
+		text-transform: uppercase;
+	}
+	&__headerRight {
+		text-align: right;
+		&--1, &--2 {
+			display: inline-block;
+			&:not(:last-child){
+				margin-right: 1rem;
+			}
+		}
+	}
+	&____headerLeft {
+		&----title {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+	&__billingDetails {
+		text-align: right;
+	}
+}

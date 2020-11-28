@@ -1,0 +1,21 @@
+.inputGroup {
+	margin-bottom: 1rem;
+	&__input {
+		border: none;
+		padding: 0.5rem 1rem;
+		display: inline-block;
+		@include respond(tab-port){
+			width: 50%;
+		}
+	}
+	&__label {
+		margin-right: 3rem;
+		padding: 0.5rem 1rem;
+		display: inline-block;
+		width: 20%;
+		@include respond(tab-port){
+			width: 30%;
+		}
+	}
+}
+

@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+
+html {
+	//this defines what 1 rem is
+	font-size: 62.5%;
+	
+	//Media queries used in accordance with the Desktop First design.
+	//Also we see the media queries for lower widths declared after the greater widths
+	// to avoid the conflict when both queries hold true.
+	
+	@include respond(tab-land) {
+		font-size: 56.25%; //1 rem = 9px; width < 1200px
+	}
+
+	@include respond(tab-port) {
+		font-size: 50%; //1 rem = 8px; width < 900px
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%; //1 rem == 12px
+	}
+}
+
+body {
+	box-sizing: border-box;
+ 	@include respond(tab-port) {
+        padding: 0;
+    }
+}

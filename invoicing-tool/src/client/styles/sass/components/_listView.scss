@@ -1,0 +1,19 @@
+.listView {
+	padding: 2rem 0;
+	background-color: $color-netflix-black;
+	&__inputSearch {
+		text-align: center;
+	}
+	&__inputSearch {
+		margin-bottom: 2rem;	
+	}
+	&__invoiceCount {
+		margin-left: 3rem;
+		margin-bottom: 2rem;
+		&--value {
+			display: inline-block;
+	    	transform: translateY(1px);
+	    	margin-left: 1rem;	
+		}
+	}
+}

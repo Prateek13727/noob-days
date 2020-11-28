@@ -1,0 +1,31 @@
+.u-no-margin-bottom { margin-bottom: 0 !important; }
+.u-margin-bottom-small { margin-bottom: 2rem !important; }
+.u-margin-bottom-medium { 
+	margin-bottom: 4rem !important; 
+	@include respond(tab-port) {
+		margin-bottom: 3rem !important; 
+	}
+}
+.u-margin-bottom-large {
+	margin-bottom: 8rem !important; 
+	@include respond(tab-port) {
+		margin-bottom: 5rem !important; 
+	}	
+}
+.u-margin-top-large { margin-top: 8rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+.u-margin-top-medium { margin-top: 6rem !important; }
+.u-no-margin-right { margin-right: 0 !important; }
+.u-no-margin-cols { 
+	margin-right: 0 !important; 
+ 	margin-left: 0 !important;
+}
+.u-margin-right-xsmall { margin-right: 1rem !important; }
+.u-center-text { text-align: center; }
+.no-pads { padding: 0 !important;}
+.u-float-right {
+	float: right !important;
+}
+.u-font-weight-bold {
+	font-weight: bold !important;
+}
